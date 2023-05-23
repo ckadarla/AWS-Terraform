@@ -23,3 +23,15 @@ variable "consul_datacenter" {
   description = "Name of the Consul datacenter"
   default     = "dc1"
 }
+
+variable "private_subnets"   {  
+  default = ["10.0.10.0/24", "10.0.11.0/24"]
+}
+
+variable "public_subnets"  {
+  default = ["10.0.0.0/24", "10.0.1.0/24"]
+}
+
+variable "subnet_count" {
+  default = 2 
+}
