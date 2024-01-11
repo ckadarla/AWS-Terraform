@@ -1,0 +1,23 @@
+formatter: json # this is required
+
+content: ""
+
+output:
+  file: USAGE.md # output-file
+  mode: replace
+  template: "<!-- BEGIN_TF_DOCS -->\n{{ .Content }}\n<!-- END_TF_DOCS -->    \n#magic___^_^___line"
+output-values:
+  enabled: false
+  from: ""
+
+sort:
+  enabled: true
+  by: name
+
+settings:
+  anchor: true
+  escape: true
+  hide-empty: true
+  html: true
+  indent: 4
+  lockfile: true
