@@ -1,5 +1,5 @@
 resource "aws_eks_cluster" "aws_eks" {
-  name     = "eks_cluster_levelup"
+  name     = "eks_cluster_demoeks"
   role_arn = aws_iam_role.eks_cluster.arn
 
   vpc_config {
@@ -12,13 +12,13 @@ resource "aws_eks_cluster" "aws_eks" {
   ]
 
   tags = {
-    Name = "EKS_Cluster_LevelUp"
+    Name = "EKS_Cluster_demoeks"
   }
 }
 
 resource "aws_eks_node_group" "node" {
   cluster_name    = aws_eks_cluster.aws_eks.name
-  node_group_name = "node_levelup"
+  node_group_name = "node_demoeks"
   node_role_arn   = aws_iam_role.eks_nodes.arn
   subnet_ids      = module.vpc.public_subnets
 
