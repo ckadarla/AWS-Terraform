@@ -1,5 +1,5 @@
 variable "cluster-name" {
-  default = "levelup-tf-eks-demo"
+  default = "demoeks-tf-eks-demo"
   type    = string
 }
 
